@@ -1,0 +1,90 @@
+/* BASE */
+/* MODULES */
+/* line 1, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_blocks.scss */
+.blockCenter {
+  text-align: center !important;
+}
+
+/* line 1, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_typography.scss */
+#services .fa {
+  font-size: 35px;
+  padding: 20px;
+  background: #4682B4;
+  color: white;
+  border-radius: 5px 5px;
+}
+
+/* line 9, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_typography.scss */
+footer .fa {
+  font-size: 35px;
+  padding: 20px;
+  background: #b47846;
+  color: white;
+  border-radius: 50px 50px;
+}
+
+/* line 17, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_typography.scss */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* LAYOUT*/
+/* line 1, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_footer.scss */
+footer {
+  position: relative;
+  bottom: 0;
+  background: #4682B4;
+  width: 100%;
+  padding: 20px;
+  overflow: inherit;
+}
+
+/* line 1, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_header.scss */
+header {
+  position: relative;
+  top: 0;
+  background: #4682B4;
+  width: 100%;
+  overflow: inherit;
+  padding: 10px;
+}
+
+/* line 10, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_header.scss */
+#headerTitle {
+  position: absolute;
+  left: 45%;
+}
+
+/* line 1, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_nav.scss */
+nav {
+  background: #4682B4;
+  color: white;
+}
+
+/* line 8, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_nav.scss */
+nav h2 {
+  text-align: center;
+}
+
+/* line 12, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_nav.scss */
+nav a {
+  display: block;
+  padding: 20px;
+  border-top: 2px solid #b47846;
+}
+
+/* line 18, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_nav.scss */
+nav a:hover {
+  background: #a2c0d9;
+  border-right: 2px solid #b47846;
+  text-decoration: none;
+}
+
+/* line 24, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_nav.scss */
+nav a:active {
+  background: #a2c0d9;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=../css/main.map */

@@ -1,0 +1,27 @@
+nav{
+  background: $primaryColor;
+  color:white;
+
+
+}
+
+nav h2{
+  text-align: center;
+}
+
+nav a{
+  display:block;
+  padding:20px;
+  border-top: 2px solid $secondaryColor;
+}
+
+nav a:hover{
+  background: $lightColor;
+  border-right: 2px solid $secondaryColor;
+  text-decoration: none;
+}
+
+nav a:active{
+  background: $lightColor;
+  text-decoration: none;
+}

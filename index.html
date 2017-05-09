@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Financing | Services</title>
+  <meta http-equiv="cleartype" content="on">
+  <meta name="MobileOptimized" content="320">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/slideout.css" rel="stylesheet">
+
+  <script src="assets/js/ie-emulation-modes-warning.js"></script>
+
+  <body>
+    <nav id="menu" class="slideout-menu">
+      <h2>Menu</h2>
+      <a href="index.html">Services</a>
+      <a href="howitworks.html">How It Works</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <main id="panel" class="slideout-panel">
+      <header>
+        <button class="toggle-button"><i class="fa fa-bars"></i></button>
+        <a id="headerTitle" href="index.html">Company</a>
+      </header>
+      <section>
+        <div class="container">
+          <h2> Our Services</h2>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="blockCenter">
+                <i class="fa fa-dollar"></i>
+                <h4>Personal Finance</h4>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                <a href="#"> View More</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="blockCenter">
+                <i class="fa fa-graduation-cap"></i>
+                <h4>School Financing</h4>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                <a href="#"> View More</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="blockCenter">
+                <i class="fa fa-car"></i>
+                <h4>Car Financing</h4>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                <a href="#"> View More</a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="blockCenter">
+                <i class="fa fa-briefcase"></i>
+                <h4>Business Financing</h4>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                <a href="#"> View More</a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="blockCenter">
+                <i class="fa fa-bank"></i>
+                <h4>Bank Finance</h4>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                <a href="#"> View More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimony">
+        <div class="container">
+          <h2>Testimonial</h2>
+          <blockquote>
+            <i class="fa fa-quote-left"></i> What more can we ask for!!!
+            <i class="fa fa-quote-right"></i>
+          </blockquote>
+          <P><em>--Customer's name</em></p>
+        </div>
+      </section>
+
+
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-xs-6">
+              <i class="fa fa-phone"></i>
+              <h3>Phone</h3>
+              <p>123-123-1234</p>
+            </div>
+            <div class="col-md-4 col-xs-6">
+              <i class="fa fa-envelope"></i>
+              <h3>Email</h3>
+              <p>abc@gmail.com</p>
+            </div>
+            <div class="col-md-4 col-xs-12">
+              <i class="fa fa-info"></i>
+              <h3><a href="howitworks.html">Learn More</a></h3>
+            </div>
+          </div>
+      </footer>
+    </main>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/slideout.min.js"></script>
+    <script>
+      var slideout = new Slideout({
+        'panel': document.getElementById('panel'),
+        'menu': document.getElementById('menu'),
+        'padding': 256,
+        'tolerance': 70,
+        'easing': 'cubic-bezier(.32,2,.55,.27)'
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        // Toggle button
+        $('.toggle-button').on('click', function() {
+          slideout.toggle();
+        });
+      });
+    </script>
+
+  </body>
+
+</html>

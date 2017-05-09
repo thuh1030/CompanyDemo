@@ -1,0 +1,35 @@
+@mixin addBackground($color){
+  background:$color;
+  @if $color==$darkColor{
+    color: white;
+  }@else{
+  color: $primaryColor;
+}
+}
+
+@mixin addBorder($size , $type, $color){
+@if $type == 'all'{
+  border:$size solid $color;
+}@else if $type == 'left'{
+  border-left:$size solid $color;
+}@else if $type == 'right'{
+  border-right:$size solid $color;
+}@else if $type == 'top'{
+    border-top:$size solid $color;
+  }@else if $type == 'bottom'{
+    border-bottom:$size solid $color;
+  }@else if $type == 'top-bottom'{
+    border-top:$size solid $color;
+    border-bottom:$size solid $color;
+  }@else if $type == 'left-right'{
+    border-left:$size solid $color;
+    border-right:$size solid $color;
+  }
+
+}
+
+@mixin border-radius($radius){
+  -webkit-border-radius:$radius;
+  -moz-border-radius:$radius;
+  border-radius:$radius;
+}

@@ -1,0 +1,32 @@
+{
+	"version": 3,
+	"file": "../scss/main.css",
+	"sources": [
+		"../scss/main.scss",
+		"../scss/base/_variables.scss",
+		"../scss/base/_mixins.scss",
+		"../scss/base/_normalize.scss",
+		"../scss/modules/_blocks.scss",
+		"../scss/modules/_buttons.scss",
+		"../scss/modules/_section.scss",
+		"../scss/modules/_typography.scss",
+		"../scss/layout/_footer.scss",
+		"../scss/layout/_header.scss",
+		"../scss/layout/_nav.scss"
+	],
+	"sourcesContent": [
+		"/* BASE */\r\n@import 'base/_variables.scss';\r\n@import 'base/_mixins.scss';\r\n@import 'base/_normalize.scss';\r\n\r\n/* MODULES */\r\n@import 'modules/_blocks.scss';\r\n@import 'modules/_buttons.scss';\r\n@import 'modules/_section.scss';\r\n@import 'modules/_typography.scss';\r\n\r\n/* LAYOUT*/\r\n@import 'layout/_footer.scss';\r\n@import 'layout/_header.scss';\r\n@import 'layout/_nav.scss';\r\n",
+		"$primaryColor : #4682B4;\r\n$secondaryColor: #b47846;\r\n$darkColor:#23415a;\r\n$lightColor: #a2c0d9;\r\n",
+		"@mixin addBackground($color){\r\n  background:$color;\r\n  @if $color==$darkColor{\r\n    color: white;\r\n  }@else{\r\n  color: $primaryColor;\r\n}\r\n}\r\n\r\n@mixin addBorder($size , $type, $color){\r\n@if $type == 'all'{\r\n  border:$size solid $color;\r\n}@else if $type == 'left'{\r\n  border-left:$size solid $color;\r\n}@else if $type == 'right'{\r\n  border-right:$size solid $color;\r\n}@else if $type == 'top'{\r\n    border-top:$size solid $color;\r\n  }@else if $type == 'bottom'{\r\n    border-bottom:$size solid $color;\r\n  }@else if $type == 'top-bottom'{\r\n    border-top:$size solid $color;\r\n    border-bottom:$size solid $color;\r\n  }@else if $type == 'left-right'{\r\n    border-left:$size solid $color;\r\n    border-right:$size solid $color;\r\n  }\r\n\r\n}\r\n\r\n@mixin border-radius($radius){\r\n  -webkit-border-radius:$radius;\r\n  -moz-border-radius:$radius;\r\n  border-radius:$radius;\r\n}\r\n",
+		"",
+		".blockCenter{\r\n  text-align: center !important;\r\n\r\n}\r\n",
+		"",
+		"",
+		"#services .fa{\r\n  font-size: 35px;\r\n  padding:20px;\r\n  background: $primaryColor;\r\n  color:white;\r\n  border-radius:5px 5px;\r\n}\r\n\r\nfooter .fa{\r\n  font-size: 35px;\r\n  padding:20px;\r\n  background: $secondaryColor;\r\n  color:white;\r\n  border-radius:50px 50px;\r\n}\r\n\r\na{\r\n  text-decoration: none;\r\n  color:white;\r\n}\r\n",
+		"footer{\r\n  position:relative;\r\n  bottom:0;\r\n  background:$primaryColor;\r\n  width:100%;\r\n  padding:20px;\r\n  overflow:inherit;\r\n}\r\n",
+		"header{\r\n  position:relative;\r\n  top:0;\r\n  background:$primaryColor;\r\n  width:100%;\r\n  overflow:inherit;\r\n  padding:10px;\r\n}\r\n\r\n#headerTitle{\r\n  position:absolute;\r\n  left:45%;\r\n\r\n}\r\n",
+		"nav{\r\n  background: $primaryColor;\r\n  color:white;\r\n\r\n\r\n}\r\n\r\nnav h2{\r\n  text-align: center;\r\n}\r\n\r\nnav a{\r\n  display:block;\r\n  padding:20px;\r\n  border-top: 2px solid $secondaryColor;\r\n}\r\n\r\nnav a:hover{\r\n  background: $lightColor;\r\n  border-right: 2px solid $secondaryColor;\r\n  text-decoration: none;\r\n}\r\n\r\nnav a:active{\r\n  background: $lightColor;\r\n  text-decoration: none;\r\n}\r\n"
+	],
+	"mappings": "AAAA,UAAU;AAKV,aAAa;;AILb,AAAA,YAAY,CAAA;EACV,UAAU,EAAE,iBAAkB;CAE/B;;;AGHD,AAAU,SAAD,CAAC,GAAG,CAAA;EACX,SAAS,EAAE,IAAK;EAChB,OAAO,EAAC,IAAK;EACb,UAAU,ENHI,OAAO;EMIrB,KAAK,EAAC,KAAM;EACZ,aAAa,EAAC,OAAQ;CACvB;;;AAED,AAAO,MAAD,CAAC,GAAG,CAAA;EACR,SAAS,EAAE,IAAK;EAChB,OAAO,EAAC,IAAK;EACb,UAAU,ENVK,OAAO;EMWtB,KAAK,EAAC,KAAM;EACZ,aAAa,EAAC,SAAU;CACzB;;;AAED,AAAA,CAAC,CAAA;EACC,eAAe,EAAE,IAAK;EACtB,KAAK,EAAC,KAAM;CACb;;APRD,WAAW;;AQXX,AAAA,MAAM,CAAA;EACJ,QAAQ,EAAC,QAAS;EAClB,MAAM,EAAC,CAAE;EACT,UAAU,EPHI,OAAO;EOIrB,KAAK,EAAC,IAAK;EACX,OAAO,EAAC,IAAK;EACb,QAAQ,EAAC,OAAQ;CAClB;;;ACPD,AAAA,MAAM,CAAA;EACJ,QAAQ,EAAC,QAAS;EAClB,GAAG,EAAC,CAAE;EACN,UAAU,ERHI,OAAO;EQIrB,KAAK,EAAC,IAAK;EACX,QAAQ,EAAC,OAAQ;EACjB,OAAO,EAAC,IAAK;CACd;;;AAED,AAAA,YAAY,CAAA;EACV,QAAQ,EAAC,QAAS;EAClB,IAAI,EAAC,GAAI;CAEV;;;ACbD,AAAA,GAAG,CAAA;EACD,UAAU,ETDI,OAAO;ESErB,KAAK,EAAC,KAAM;CAGb;;;AAED,AAAI,GAAD,CAAC,EAAE,CAAA;EACJ,UAAU,EAAE,MAAO;CACpB;;;AAED,AAAI,GAAD,CAAC,CAAC,CAAA;EACH,OAAO,EAAC,KAAM;EACd,OAAO,EAAC,IAAK;EACb,UAAU,EAAE,GAAG,CAAC,KAAK,CTbN,OAAO;CScvB;;;AAED,AAAK,GAAF,CAAC,CAAC,AAAA,MAAM,CAAA;EACT,UAAU,ETfC,OAAO;ESgBlB,YAAY,EAAE,GAAG,CAAC,KAAK,CTlBR,OAAO;ESmBtB,eAAe,EAAE,IAAK;CACvB;;;AAED,AAAK,GAAF,CAAC,CAAC,AAAA,OAAO,CAAA;EACV,UAAU,ETrBC,OAAO;ESsBlB,eAAe,EAAE,IAAK;CACvB",
+	"names": []
+}
