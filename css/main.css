@@ -5,6 +5,45 @@
   text-align: center !important;
 }
 
+/* line 6, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_blocks.scss */
+.block {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* line 1, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_section.scss */
+#services a {
+  display: block;
+  background: #4682B4;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* line 9, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_section.scss */
+#services .block {
+  border: 2px solid #4682B4;
+  margin-bottom: 30px;
+}
+
+/* line 14, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_section.scss */
+#howitworks .fa {
+  font-size: 30px;
+}
+
+/* line 18, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_section.scss */
+#testimony {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 4px solid #4682B4;
+  background: #eee;
+  color: #4682B4;
+  box-shadow: 0px 5px 5px 0px rgba(100, 100, 100, 0.2);
+}
+
 /* line 1, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_typography.scss */
 #services .fa {
   font-size: 35px;
@@ -17,16 +56,18 @@
 /* line 9, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_typography.scss */
 footer .fa {
   font-size: 35px;
-  padding: 20px;
-  background: #b47846;
-  color: white;
-  border-radius: 50px 50px;
+  color: #b47846;
 }
 
-/* line 17, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_typography.scss */
+/* line 14, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_typography.scss */
 a {
   text-decoration: none;
   color: white;
+}
+
+/* line 19, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_typography.scss */
+footer i {
+  margin-right: 20px;
 }
 
 /* LAYOUT*/
@@ -35,25 +76,40 @@ footer {
   position: relative;
   bottom: 0;
   background: #4682B4;
+  color: white;
   width: 100%;
   padding: 20px;
   overflow: inherit;
 }
 
-/* line 1, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_header.scss */
-header {
-  position: relative;
-  top: 0;
-  background: #4682B4;
-  width: 100%;
-  overflow: inherit;
-  padding: 10px;
+/* line 10, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_footer.scss */
+footer [class^="col"] {
+  padding-bottom: 30px;
 }
 
-/* line 10, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_header.scss */
+/* line 1, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_header.scss */
+header {
+  position: fixed;
+  background: #4682B4;
+  color: white;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  overflow: inherit;
+  height: 60px !important;
+  -webkit-transform: translate3d(0, 0, 0);
+  z-index: 2;
+}
+
+/* line 13, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_header.scss */
 #headerTitle {
+  position: relative;
+  left: 46%;
+}
+
+/* line 18, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_header.scss */
+.toggle-button {
   position: absolute;
-  left: 45%;
 }
 
 /* line 1, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_nav.scss */
@@ -62,29 +118,44 @@ nav {
   color: white;
 }
 
-/* line 8, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_nav.scss */
+/* line 7, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_nav.scss */
 nav h2 {
   text-align: center;
 }
 
-/* line 12, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_nav.scss */
+/* line 11, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_nav.scss */
 nav a {
   display: block;
   padding: 20px;
   border-top: 2px solid #b47846;
 }
 
-/* line 18, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_nav.scss */
+/* line 17, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_nav.scss */
 nav a:hover {
   background: #a2c0d9;
   border-right: 2px solid #b47846;
   text-decoration: none;
 }
 
-/* line 24, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_nav.scss */
+/* line 23, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_nav.scss */
 nav a:active {
   background: #a2c0d9;
   text-decoration: none;
+}
+
+/* line 1, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_content.scss */
+#middleContent {
+  height: 100%;
+  top: 60px;
+  margin-bottom: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  position: relative;
+}
+
+/* line 9, C:/Users/Home/Desktop/CompanyDemo/scss/layout/_content.scss */
+html {
+  min-height: 100%;
 }
 
 /*# sourceMappingURL=../css/main.map */

@@ -2,10 +2,35 @@
   background:$color;
   @if $color==$darkColor{
     color: white;
-  }@else{
+  }@else if $color==$primaryColor{
+    color: white;
+  }
+  @else{
   color: $primaryColor;
 }
 }
+
+@mixin addPadding($size,$side){
+  @if $side == 'all'{
+    padding:$size;
+  }@else if $side == 'left'{
+    padding-left:$size;
+  }@else if $side == 'right'{
+    padding-right:$size;
+  }@else if $side == 'top'{
+    padding-top:$size;
+  }@else if $side == 'bottom'{
+    padding-bottom:$size;
+  }@else if $side == 'left-right'{
+    padding-left:$size;
+    padding-right:$size;
+  }@else if $side == 'top-bottom'{
+    padding-top:$size;
+    padding-bottom:$size;
+  }
+}
+
+
 
 @mixin addBorder($size , $type, $color){
 @if $type == 'all'{

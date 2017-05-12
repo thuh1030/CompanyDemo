@@ -8,13 +8,14 @@
 
 footer .fa{
   font-size: 35px;
-  padding:20px;
-  background: $secondaryColor;
-  color:white;
-  border-radius:50px 50px;
+  color:$secondaryColor
 }
 
 a{
   text-decoration: none;
   color:white;
+}
+
+footer i{
+  margin-right: 20px;
 }

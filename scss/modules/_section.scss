@@ -1,0 +1,24 @@
+#services a{
+  display:block;
+  @include addBackground($primaryColor);
+  @include addPadding(20px,"top-bottom");
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#services .block{
+  @include addBorder(2px, "all", $primaryColor);
+  margin-bottom:30px;
+}
+
+#howitworks .fa{
+  font-size:30px;
+}
+
+#testimony{
+  margin-top:20px;
+  @include addPadding(20px, "top-bottom");
+  @include addBorder(4px, "top", $primaryColor);
+  @include addBackground(#eee);
+  box-shadow: 0px 5px 5px 0px rgba(100,100,100,0.2);
+}

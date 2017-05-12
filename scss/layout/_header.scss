@@ -1,14 +1,21 @@
 header{
-  position:relative;
-  top:0;
-  background:$primaryColor;
+  position:fixed;
+  @include addBackground($primaryColor);
   width:100%;
+  padding-top:20px;
+  padding-bottom:30px;
   overflow:inherit;
-  padding:10px;
+  height:60px !important;
+  -webkit-transform: translate3d(0, 0, 0);
+  z-index: 2;
 }
 
 #headerTitle{
+position:relative;
+left:46%;
+}
+
+.toggle-button{
   position:absolute;
-  left:45%;
 
 }

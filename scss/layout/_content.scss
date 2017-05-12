@@ -1,0 +1,11 @@
+#middleContent{
+  height:100%;
+  top:60px;
+  margin-bottom:50px;
+  @include addPadding(25px, "top-bottom");
+  position:relative;
+}
+
+html{
+  min-height:100%;
+}
