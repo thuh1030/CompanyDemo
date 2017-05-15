@@ -1,21 +1,14 @@
-header{
-  position:fixed;
-  @include addBackground($primaryColor);
-  width:100%;
-  padding-top:20px;
-  padding-bottom:30px;
-  overflow:inherit;
-  height:60px !important;
-  -webkit-transform: translate3d(0, 0, 0);
-  z-index: 2;
+body {
+  min-height: 100%;
+  padding-top: 70px;
 }
 
-#headerTitle{
-position:relative;
-left:46%;
+@media (max-width:700px){
+  #navbarMenu{
+    display:none !important;
+  }
 }
 
-.toggle-button{
-  position:absolute;
-
+nav .container{
+  @include addBorder(4px, "bottom",$primaryColor);
 }

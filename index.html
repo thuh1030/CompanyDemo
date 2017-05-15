@@ -11,29 +11,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="css/main.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/slideout.css" rel="stylesheet">
 </head>
-  <body>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed toggle-button" data-toggle="collapse" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="#">Company</a>
+      </div>
+      <div id="navbarMenu">
+        <ul class="nav navbar-nav">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#howitworks">How It Works</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <main>
     <nav id="menu" class="slideout-menu">
       <h2>Menu</h2>
       <a href="#services">Services</a>
-      <a href="#howitworks">About Us</a>
+      <a href="#howitworks">How It Works</a>
+      <a href="#about">About Us</a>
       <a href="#contact">Contact Us</a>
     </nav>
 
-    <main id="panel" class="slideout-panel">
-      <header>
-        <div class="container">
-          <button class="toggle-button"><i class="fa fa-bars"></i></button>
-          <a id="headerTitle" href="index.html">Company</a>
-        </div>
-      </header>
-      <div id="middleContent">
+    <div id="panel" class="slideout-panel">
 
+      <div id="middleContent">
+        <section id="showcase">
+          <div class="container blockCenter">
+
+              <i class="fa fa-dollar"></i>
+              <i class="fa fa-graduation-cap"></i>
+              <i class="fa fa-car"></i>
+              <i class="fa fa-briefcase"></i>
+              <i class="fa fa-bank"></i>
+          </div>
+        </section>
         <section id="services">
           <div class="container">
             <h2> Our Services</h2>
@@ -95,99 +124,187 @@
           <div class="container">
             <h2> How It Works</h2>
             <div class="row">
-            <div class="col-md-12">
-              <h3>Step 1</h3>
-              <p>Pellentesque habitant morbi tristique senectus et netus et
-                malesuada fames ac turpis egestas.
-              </p>
-            </div>
-            <div class="col-md-12">
+              <div class="col-md-3 col-sm-12">
+                <div class="block blockCenter">
+                  <i class="fa fa-dollar"></i>
+                </div>
+              </div>
+              <div class="col-md-9 col-sm-12">
+                <div class="block">
 
-              <h3>Step 2</h3>
-              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
-                fames ac turpis egestas.
-              </p>
-            </div>
-            <div class="col-md-12">
+                  <h3>Step 1</h3>
+                  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                     Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac,
+                      vestibulum at eros. Praesent commodo cursus
+                    magna, vel scelerisque nisl consectetur et.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-12">
+                <div class="block blockCenter">
 
-              <h3>Step 3</h3>
-              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
-                fames ac turpis egestas.
-              </p>
+                  <i class="fa fa-bank"></i>
+                </div>
+              </div>
+              <div class="col-md-9 col-sm-12">
+                <div class="block">
+
+                  <h3>Step 2</h3>
+                  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                     Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac,
+                     vestibulum at eros. Praesent commodo cursus
+                    magna, vel scelerisque nisl consectetur et.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-12">
+                <div class="block blockCenter">
+                  <i class="fa fa-check"></i>
+                </div>
+              </div>
+              <div class="col-md-9 col-sm-12">
+                <div class="block">
+
+                  <h3>Step 3</h3>
+                  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac,
+                     vestibulum at eros. Praesent commodo cursus
+                    magna, vel scelerisque nisl consectetur et.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-      </section>
+        </section>
 
-      <section id="about">
-      </section>
+        <section id="about">
 
-      <section id="contact">
-        email
-        message
-         or phone , email,
-      </section>
-
-
-</div>
-      <footer>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 blockCenter">
-              <i class="fa fa-phone"></i>
-                <i class="fa fa-envelope"></i>
-                <i class="fa fa-info"></i>
+          <div class="container">
+            <h2>Meet Our CEO</h2>
+            <div class="row">
+              <div class="col-md-2">
+                <img src="ceo-profile.png" width="100%">
               </div>
-
-              <div class="col-md-4 col-xs-3 blockCenter">
-                <a>About</a><br />
-                <a>Contact</a>
-              </div>
-              <div class="col-md-4 col-xs-3 blockCenter">
-                <a>Service a</a><br />
-                <a>Service b</a><br />
-                <a>Service c</a><br />
-                <a>Service d</a><br />
-                <a>Service e</a><br />
-                <a>Service f</a>
-              </div>
-              <div class="col-md-4 col-xs-3 blockCenter">
-                <a href="#learnMore">Learn More</a>
+              <div class="col-md-10">
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.
+                   Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus,
+                   porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl
+                  consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                  Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                  Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                </p>
+                <p>--CEO John Doe</p>
               </div>
             </div>
-            </footer>
-    </main>
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script
-  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-  crossorigin="anonymous"></script>
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-  crossorigin="anonymous"></script>
-  <script src="assets/js/ie-emulation-modes-warning.js"></script>
-    <script src="js/slideout.min.js"></script>
-    <script>
-      var slideout = new Slideout({
-        'panel': document.getElementById('panel'),
-        'menu': document.getElementById('menu'),
-        'padding': 256,
-        'tolerance': 70,
-        'easing': 'cubic-bezier(.32,2,.55,.27)'
-      });
-    </script>
-    <script>
-      $(document).ready(function() {
-        // Toggle button
-        $('.toggle-button').on('click', function() {
-          slideout.toggle();
-        });
-      });
-    </script>
+          </div>
+        </section>
 
-  </body>
+        <section id="contact">
+          <div class="container">
+            <h2>Contact Us Now</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <div id="contactBox">
+                  <form>
+                    <div class="form-group">
+                      <label>Name:</label>
+                      <input name="name" class="form-control" placeholder="Jane Doe">
+                    </div>
+                    <div class="form-group">
+                      <label>Email:</label>
+                      <input type="email" class="form-control" placeholder="ex: janedoe@gmail.com">
+                    </div>
+                    <div class="form-group">
+                      <label>Reason:</label>
+                      <select class="form-control">
+                        <option>Request a quote....</option>
+                        <option>Other Question.....</option>
+                        <option>Job openning.......</option>
+                        <option>Just to say "hi"...</option>
+                      </select>
+                    </div>
+                    <textarea class="form-control" rows="3" placeholder="Your message here..."></textarea>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </form>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div id="contactInfo">
+                    <div class="block blockCenter">
+                      <i class="fa fa-phone"></i>
+                      <h4>You can reach us by calling</h4>
+                      <p>1(800)135-2468</p>
+                    </div>
+                    <div class="block blockCenter">
+                      <i class="fa fa-building"></i>
+                      <h4>Visit us at our office</h4>
+                      <p>123 Corporate Pl,</p>
+                      <p>Los Angeles, CA 90032</p>
+                      <p>Mon-Fri.........9 a.m. to 6 p.m.</p>
+                    </div>
+                    <div class="block blockCenter">
+                      <i class="fa fa-envelope"></i>
+                      <h4>Email us</h4>
+                      <p>companyis@gmail.com</p>
+                    </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-4 col-xs-4 blockCenter">
+          <a>About</a><br />
+          <a>Contact</a>
+        </div>
+        <div class="col-md-4 col-xs-4 blockCenter">
+          <a>Personal Financing</a><br />
+          <a>Business Financing</a><br />
+          <a>School Financing</a><br />
+          <a>More...</a>
+        </div>
+        <div class="col-md-4 col-xs-4 blockCenter">
+          <a href="#learnMore">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="js/slideout.min.js"></script>
+  <script>
+    var slideout = new Slideout({
+      'panel': document.getElementById('panel'),
+      'menu': document.getElementById('menu'),
+      'padding': 256,
+      'tolerance': 70,
+      'easing': 'cubic-bezier(.32,2,.55,.27)'
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      // Toggle button
+      $('.toggle-button').on('click', function() {
+        slideout.toggle();
+      });
+    });
+  </script>
+
+</body>
 
 </html>

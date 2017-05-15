@@ -1,11 +1,26 @@
 #services .fa{
-  font-size: 35px;
-  padding:20px;
-  background: $primaryColor;
+  font-size:35px;
+  @include addPadding(20px,"all");
+  @include addBackground($primaryColor);
   color:white;
-  border-radius:5px 5px;
+  @include border-radius(5px);
 }
 
+#howitworks .fa{
+  font-size:35px;
+  @include border-radius(50px);
+  @include addPadding(20px,"all");
+  @include addBackground($primaryColor);
+}
+
+#howitworks .fa-dollar{
+  @include addPadding(30px,"left-right");
+}
+
+#contactInfo .fa{
+  font-size:28px;
+
+}
 footer .fa{
   font-size: 35px;
   color:$secondaryColor
@@ -18,4 +33,12 @@ a{
 
 footer i{
   margin-right: 20px;
+}
+
+#showcase i{
+  margin-top:50px;
+  font-size:80px;
+  @include addPadding(30px,"all");
+  color:$secondaryColor;
+
 }

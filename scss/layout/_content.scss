@@ -1,11 +1,15 @@
 #middleContent{
   height:100%;
-  top:60px;
+
   margin-bottom:50px;
-  @include addPadding(25px, "top-bottom");
-  position:relative;
+  @include addPadding(25px, "bottom");
 }
 
-html{
-  min-height:100%;
+#panel{
+  position:relative;
+  top:-20px;
 }
+ main{
+   height:100%;
+
+ }

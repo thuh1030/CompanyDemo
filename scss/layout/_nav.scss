@@ -1,6 +1,7 @@
-nav{
+nav#menu{
   background: $primaryColor;
   color:white;
+  top:50px;
 
 }
 
@@ -8,19 +9,19 @@ nav h2{
   text-align: center;
 }
 
-nav a{
+nav#menu a{
   display:block;
   padding:20px;
   border-top: 2px solid $secondaryColor;
 }
 
-nav a:hover{
+nav#menu a:hover{
   background: $lightColor;
   border-right: 2px solid $secondaryColor;
   text-decoration: none;
 }
 
-nav a:active{
+nav#menu a:active{
   background: $lightColor;
   text-decoration: none;
 }
