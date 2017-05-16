@@ -37,7 +37,7 @@
           <li><a href="#about">About Us</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
+        <ul  id="searchBox" class="nav navbar-nav navbar-right">
           <li><input id="search" type="text" class="form-control" placeholder="search"></li>
           <li><a id="searchButton" class="btn btn-default" role="button"><span class="glyphicon glyphicon-search"></a></li>
 
@@ -436,14 +436,14 @@
         });
       });
 
-      $("#search, #searchButton").on("mouseenter", function() {
+      $("#searchBox").on("mouseenter", function() {
 
         $("#search").css("display", "inline");
         $("#search").animate({
           width: "200px"
         }, 1000);
       });
-      $("#search, #searchButton").on("mouseleave", function() {
+      $("#searchBox").on("mouseleave", function() {
         $("#search").animate({
           width: "-10px"
         }, 1000);
