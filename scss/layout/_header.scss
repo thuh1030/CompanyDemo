@@ -3,7 +3,7 @@ body {
   padding-top: 70px;
 }
 
-@media (max-width:700px){
+@media (max-width:767px){
   #navbarMenu{
     display:none !important;
   }
@@ -11,4 +11,9 @@ body {
 
 nav .container{
   @include addBorder(4px, "bottom",$primaryColor);
+}
+
+#header a:hover{
+  color:$secondaryColor;
+  @include addBorder(2px,"bottom",$secondaryColor);
 }

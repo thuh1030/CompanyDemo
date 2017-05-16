@@ -1,3 +1,13 @@
+body{
+  font-family: 'Poppins', sans-serif;
+}
+h2, h4{
+  color:	#565656;
+}
+
+.letterSpacing{
+  letter-spacing: 10px;
+}
 #services .fa{
   font-size:35px;
   @include addPadding(20px,"all");
@@ -8,15 +18,22 @@
 
 #howitworks .fa{
   font-size:35px;
-  @include border-radius(50px);
-  @include addPadding(20px,"all");
+  @include border-radius(60px);
+  @include addPadding(40px,"all");
   @include addBackground($primaryColor);
 }
 
 #howitworks .fa-dollar{
-  @include addPadding(30px,"left-right");
+  @include addPadding(50px,"left-right");
 }
 
+.stepTitle{
+  color:	#565656 !important;
+  @include addPadding(10px,"left");
+}
+#howitworks h3{
+  color:$secondaryColor;
+}
 #contactInfo .fa{
   font-size:28px;
 
@@ -41,4 +58,8 @@ footer i{
   @include addPadding(30px,"all");
   color:$secondaryColor;
 
+}
+
+#emailHelp{
+  color:red;
 }

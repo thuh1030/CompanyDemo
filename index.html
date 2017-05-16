@@ -15,10 +15,11 @@
   <link href="css/main.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/slideout.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav id="header" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed toggle-button" data-toggle="collapse" aria-expanded="false" aria-controls="navbar">
@@ -54,13 +55,31 @@
 
       <div id="middleContent">
         <section id="showcase">
-          <div class="container blockCenter">
-
-              <i class="fa fa-dollar"></i>
-              <i class="fa fa-graduation-cap"></i>
-              <i class="fa fa-car"></i>
-              <i class="fa fa-briefcase"></i>
-              <i class="fa fa-bank"></i>
+          <div class="container">
+            <div class="row blockCenter">
+              <div class="col-sm-1">
+              </div>
+              <div class="col-sm-2">
+                <i class="fa fa-dollar"></i>
+              </div>
+              <div class="col-sm-2 ">
+                <i class="fa fa-graduation-cap"></i>
+              </div>
+              <div class="col-sm-2">
+                <i class="fa fa-car"></i>
+              </div>
+              <div class="col-sm-2 ">
+                <i class="fa fa-briefcase"></i>
+              </div>
+              <div class="col-sm-2">
+                <i class="fa fa-bank"></i>
+              </div>
+              <div class="col-sm-1 ">
+              </div>
+              <div class="col-sm-12 ">
+                <h1>Welcome!</h1>
+              </div>
+            </div>
           </div>
         </section>
         <section id="services">
@@ -72,7 +91,13 @@
                   <i class="fa fa-dollar"></i>
                   <h4>Personal Finance</h4>
                   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                  <a href="#"> View More</a>
+                  <a class="expandContent" href="#"> View More</a>
+                  <span class="moreContent">
+                         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus
+                           magna, vel scelerisque nisl consectetur et.
+                         </p>
+                     <a class="lessContent" href="#">Less...</a>
+                     </span>
                 </div>
               </div>
               <div class="col-md-4">
@@ -80,7 +105,13 @@
                   <i class="fa fa-graduation-cap"></i>
                   <h4>School Financing</h4>
                   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                  <a href="#"> View More</a>
+                  <a class="expandContent" href="#"> View More</a>
+                  <span class="moreContent">
+                         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus
+                           magna, vel scelerisque nisl consectetur et.
+                         </p>
+                     <a class="lessContent" href="#">Less...</a>
+                     </span>
                 </div>
               </div>
               <div class="col-md-4">
@@ -88,7 +119,13 @@
                   <i class="fa fa-car"></i>
                   <h4>Car Financing</h4>
                   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                  <a href="#"> View More</a>
+                  <a class="expandContent" href="#"> View More</a>
+                  <span class="moreContent">
+                         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus
+                           magna, vel scelerisque nisl consectetur et.
+                         </p>
+                     <a class="lessContent" href="#">Less...</a>
+                     </span>
                 </div>
               </div>
               <div class="col-md-6">
@@ -96,7 +133,13 @@
                   <i class="fa fa-briefcase"></i>
                   <h4>Business Financing</h4>
                   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                  <a href="#"> View More</a>
+                  <a class="expandContent" href="#"> View More</a>
+                  <span class="moreContent">
+                         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus
+                           magna, vel scelerisque nisl consectetur et.
+                         </p>
+                     <a class="lessContent" href="#">Less...</a>
+                     </span>
                 </div>
               </div>
               <div class="col-md-6">
@@ -104,7 +147,13 @@
                   <i class="fa fa-bank"></i>
                   <h4>Bank Finance</h4>
                   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                  <a href="#"> View More</a>
+                  <a class="expandContent" href="#"> View More</a>
+                  <span class="moreContent">
+                         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus
+                           magna, vel scelerisque nisl consectetur et.
+                         </p>
+                     <a class="lessContent" href="#">Less...</a>
+                     </span>
                 </div>
               </div>
             </div>
@@ -132,10 +181,8 @@
               <div class="col-md-9 col-sm-12">
                 <div class="block">
 
-                  <h3>Step 1</h3>
-                  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                     Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac,
-                      vestibulum at eros. Praesent commodo cursus
+                  <h3>Step 1<span class="stepTitle">Nullam id dolor</span></h3>
+                  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus
                     magna, vel scelerisque nisl consectetur et.
                   </p>
                 </div>
@@ -149,10 +196,8 @@
               <div class="col-md-9 col-sm-12">
                 <div class="block">
 
-                  <h3>Step 2</h3>
-                  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                     Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac,
-                     vestibulum at eros. Praesent commodo cursus
+                  <h3>Step 2<span class="stepTitle">Morbi leo risus</span></h3>
+                  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus
                     magna, vel scelerisque nisl consectetur et.
                   </p>
                 </div>
@@ -165,10 +210,8 @@
               <div class="col-md-9 col-sm-12">
                 <div class="block">
 
-                  <h3>Step 3</h3>
-                  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                    Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac,
-                     vestibulum at eros. Praesent commodo cursus
+                  <h3>Step 3<span class="stepTitle">Donec sed odio </span></h3>
+                  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus
                     magna, vel scelerisque nisl consectetur et.
                   </p>
                 </div>
@@ -187,12 +230,8 @@
                 <img src="ceo-profile.png" width="100%">
               </div>
               <div class="col-md-10">
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.
-                   Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus,
-                   porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl
-                  consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                  Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                  Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl
+                  consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
                 </p>
                 <p>--CEO John Doe</p>
               </div>
@@ -208,47 +247,56 @@
                 <div id="contactBox">
                   <form>
                     <div class="form-group">
+                      <h3 id="contactHelp"></h3>
                       <label>Name:</label>
-                      <input name="name" class="form-control" placeholder="Jane Doe">
+                      <input id="name" class="form-control" placeholder="Jane Doe"  title="Unless you are Jane Doe, don't skip this part">
                     </div>
                     <div class="form-group">
-                      <label>Email:</label>
-                      <input type="email" class="form-control" placeholder="ex: janedoe@gmail.com">
+                      <label>Email:</label><span id="emailHelp"></span>
+                      <input type="email" id="emailField" class="form-control" placeholder="ex: janedoe@gmail.com" title="We ask for your email to spam you" onblur="validateInput(emailOk($('#emailField').val()),'#emailHelp','&nbspInvalid email')">
                     </div>
                     <div class="form-group">
                       <label>Reason:</label>
-                      <select class="form-control">
+                      <select id="reason" class="form-control">
                         <option>Request a quote....</option>
                         <option>Other Question.....</option>
                         <option>Job openning.......</option>
                         <option>Just to say "hi"...</option>
                       </select>
                     </div>
-                    <textarea class="form-control" rows="3" placeholder="Your message here..."></textarea>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <textarea class="form-control" rows="5" placeholder="Your message here..."></textarea>
+                    <br />
+                    <button id="send" type="submit" class="btn btn-default">Send</button>
                   </form>
                 </div>
               </div>
               <div class="col-md-6">
                 <div id="contactInfo">
-                    <div class="block blockCenter">
-                      <i class="fa fa-phone"></i>
-                      <h4>You can reach us by calling</h4>
-                      <p>1(800)135-2468</p>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="block blockCenter">
+                        <i class="fa fa-phone"></i>
+                        <h4>You can reach us by calling</h4>
+                        <p>1(800)135-2468</p>
+                      </div>
                     </div>
-                    <div class="block blockCenter">
-                      <i class="fa fa-building"></i>
-                      <h4>Visit us at our office</h4>
-                      <p>123 Corporate Pl,</p>
-                      <p>Los Angeles, CA 90032</p>
-                      <p>Mon-Fri.........9 a.m. to 6 p.m.</p>
+                    <div class="col-md-12">
+                      <div class="block blockCenter">
+                        <i class="fa fa-building"></i>
+                        <h4>Visit us at our office</h4>
+                        <p>123 Corporate Pl,</p>
+                        <p>Los Angeles, CA 90032</p>
+                        <p>Mon-Fri.........9 a.m. to 6 p.m.</p>
+                      </div>
                     </div>
-                    <div class="block blockCenter">
-                      <i class="fa fa-envelope"></i>
-                      <h4>Email us</h4>
-                      <p>companyis@gmail.com</p>
+                    <div class="col-md-12">
+                      <div class="block blockCenter">
+                        <i class="fa fa-envelope"></i>
+                        <h4>Email us</h4>
+                        <p>companyis@gmail.com</p>
+                      </div>
                     </div>
-
+                  </div>
                 </div>
               </div>
             </div>
@@ -264,17 +312,17 @@
       <div class="row">
 
         <div class="col-md-4 col-xs-4 blockCenter">
-          <a>About</a><br />
-          <a>Contact</a>
+          <a href="#about">About</a><br />
+          <a href="#contact">Contact</a>
         </div>
         <div class="col-md-4 col-xs-4 blockCenter">
-          <a>Personal Financing</a><br />
-          <a>Business Financing</a><br />
-          <a>School Financing</a><br />
-          <a>More...</a>
+          <a href="#services">Personal Financing</a><br />
+          <a href="#services">Business Financing</a><br />
+          <a href="#services">School Financing</a><br />
+          <a href="#services">More...</a>
         </div>
         <div class="col-md-4 col-xs-4 blockCenter">
-          <a href="#learnMore">Learn More</a>
+          <a href="#howitworks">Learn More</a>
         </div>
       </div>
     </div>
@@ -282,7 +330,9 @@
 
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
@@ -295,12 +345,112 @@
       'tolerance': 70,
       'easing': 'cubic-bezier(.32,2,.55,.27)'
     });
+
+    window.sr = ScrollReveal();
+    sr.reveal('#showcase', {
+      viewFactor: 0.2,
+      origin: 'bottom',
+      distance: "20px",
+      duration: 2000
+    });
+    sr.reveal(".block", {
+      container: '#services',
+      viewFactor: 0.2,
+      origin: 'top',
+      distance: "20px",
+      delay: 1000,
+      duration: 2000,
+      mobile: true
+    });
+    sr.reveal("#testimony", {
+      origin: 'left',
+      distance: "60px",
+      viewFactor: 0.2,
+      origin: 'bottom',
+      distance: "20px",
+      duration: 2000
+    });
+    sr.reveal('.block', {
+      container: '#howitworks',
+      viewFactor: 0.2,
+      delay: 2000,
+      duration: 2000,
+      mobile: true
+    });
+    sr.reveal('.col-md-2', {
+      container: '#about',
+      viewFactor: 0.2,
+      delay: 2000,
+      duration: 2000,
+      mobile: true
+    });
+    sr.reveal('.col-md-10', {
+      container: '#about',
+      viewFactor: 0.2,
+      delay: 2000,
+      duration: 2000,
+      mobile: true
+    });
+
+    function validateInput(regex, helpId, helpMsg) {
+      if (regex) {
+        $(helpId).html("");
+      } else if (regex == false) {
+        $(helpId).html(helpMsg);
+      }
+    }
+
+    function emailOk(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
   </script>
+
   <script>
     $(document).ready(function() {
       // Toggle button
       $('.toggle-button').on('click', function() {
         slideout.toggle();
+      });
+      $("#showcase").bind("mouseenter mouseleave", function() {
+        $("#showcase h1").toggleClass("letterSpacing");
+      });
+
+      $("#showcase .col-sm-2").on("mouseover", function() {
+        $(this).animate({
+          top: "20px",
+          fontSize: "100px;"
+        });
+      });
+      $("#showcase .col-sm-2").on("mouseout", function() {
+        $(this).animate({
+          top: "0px",
+          fontSize: "80px;"
+        });
+      });
+
+      $(".expandContent").on("click", function(event) {
+        $(this).next(".moreContent").css("display", "block");
+        $(this).css("display", "none");
+        event.preventDefault();
+      });
+      $(".lessContent").on("click", function(event) {
+        $(this).parent(".moreContent").css("display", "none");
+        $(this).parent(".moreContent").prev(".expandContent").css("display", "block");
+        event.preventDefault();
+      });
+
+      $("#reason").change(function() {
+        $("#contactBox").css("padding-top", "0");
+        $("#contactHelp").html("Reason: " + $(this).val());
+      });
+      $("#emailField").tooltip();
+      $("#name").tooltip();
+
+      $("#send").click(function(event) {
+        event.preventDefault();
+        $("#contactBox").css("padding-top", "0");
+        $("#contactHelp").html("Thank you. Your message was sent!");
       });
     });
   </script>
