@@ -11,6 +11,13 @@
   padding-bottom: 20px;
 }
 
+/* line 1, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_buttons.scss */
+#search {
+  width: 200px;
+  height: 52px;
+  display: none;
+}
+
 /* line 1, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_section.scss */
 section {
   margin-bottom: 30px;

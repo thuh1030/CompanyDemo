@@ -37,6 +37,11 @@
           <li><a href="#about">About Us</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><input id="search" type="text" class="form-control" placeholder="search"></li>
+          <li><a id="searchButton" class="btn btn-default" role="button"><span class="glyphicon glyphicon-search"></a></li>
+
+        </ul>
       </div>
       <!--/.nav-collapse -->
     </div>
@@ -249,7 +254,7 @@
                     <div class="form-group">
                       <h3 id="contactHelp"></h3>
                       <label>Name:</label>
-                      <input id="name" class="form-control" placeholder="Jane Doe"  title="Unless you are Jane Doe, don't skip this part">
+                      <input id="name" class="form-control" placeholder="Jane Doe" title="Unless you are Jane Doe, don't skip this part">
                     </div>
                     <div class="form-group">
                       <label>Email:</label><span id="emailHelp"></span>
@@ -346,7 +351,9 @@
       'easing': 'cubic-bezier(.32,2,.55,.27)'
     });
 
-    window.sr = ScrollReveal({reset:true});
+    window.sr = ScrollReveal({
+      reset: true
+    });
     sr.reveal('#showcase', {
       viewFactor: 0.2,
       origin: 'bottom',
@@ -419,16 +426,29 @@
       $("#showcase .col-sm-2").on("mouseover", function() {
         $(this).animate({
           top: "20px",
-          fontSize: "100px;"
+          fontSize: "100px"
         });
       });
       $("#showcase .col-sm-2").on("mouseout", function() {
         $(this).animate({
           top: "0px",
-          fontSize: "80px;"
+          fontSize: "80px"
         });
       });
 
+      $("#search, #searchButton").on("mouseenter", function() {
+
+        $("#search").css("display", "inline");
+        $("#search").animate({
+          width: "200px"
+        }, 1000);
+      });
+      $("#search, #searchButton").on("mouseleave", function() {
+        $("#search").animate({
+          width: "-10px"
+        }, 1000);
+        $("#search").css("display", "none");
+      });
       $(".expandContent").on("click", function(event) {
         $(this).next(".moreContent").css("display", "block");
         $(this).css("display", "none");
