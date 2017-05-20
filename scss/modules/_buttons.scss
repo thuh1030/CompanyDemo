@@ -4,3 +4,13 @@
   display:none;
 
 }
+
+#areaSearch{
+  margin-top:30px;
+}
+#areaSearch a{
+  font-size: 20px;
+  @include addBackground($primaryColor);
+  @include addPadding(25px, "top-bottom");
+  box-shadow: 0 5px 5px 0 rgba(100,100,100,0.2);
+}
