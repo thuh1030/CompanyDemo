@@ -80,3 +80,9 @@ section {
 #howitworks i {
   box-shadow: 0 5px 5px rgba(0,0,0,.2);
 }
+
+#searchBox{
+  @include addPadding(25px,"top-bottom");
+  @include addBackground(#eee);
+
+}

@@ -11,26 +11,31 @@
   padding-bottom: 20px;
 }
 
-/* line 1, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_buttons.scss */
-#search {
-  width: 200px;
-  height: 52px;
-  display: none;
-}
-
-/* line 8, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_buttons.scss */
+/* line 2, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_buttons.scss */
 #areaSearch {
   margin-top: 30px;
 }
 
-/* line 11, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_buttons.scss */
-#areaSearch a {
+/* line 5, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_buttons.scss */
+#areaSearch button {
   font-size: 20px;
   background: #4682B4;
   color: white;
   padding-top: 25px;
   padding-bottom: 25px;
   box-shadow: 0 5px 5px 0 rgba(100, 100, 100, 0.2);
+}
+
+/* line 12, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_buttons.scss */
+#areaSearch input {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* line 17, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_buttons.scss */
+#searchButton {
+  background: #4682B4;
+  color: white;
 }
 
 /* line 1, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_section.scss */
@@ -145,6 +150,14 @@ section {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* line 84, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_section.scss */
+#searchBox {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background: #eee;
+  color: #4682B4;
+}
+
 /* line 1, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_typography.scss */
 body {
   font-family: 'Poppins', sans-serif;
@@ -231,8 +244,24 @@ footer i {
 }
 
 /* line 63, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_typography.scss */
-#emailHelp {
+#emailHelp, #searchHelp {
   color: red;
+}
+
+/* line 67, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_typography.scss */
+a.searchTitle {
+  font-size: 20px;
+  color: #4682B4 !important;
+}
+
+/* line 72, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_typography.scss */
+a.searchTitle:visited {
+  color: purple;
+}
+
+/* line 76, C:/Users/Home/Desktop/CompanyDemo/scss/modules/_typography.scss */
+p.searchLink {
+  color: #008000;
 }
 
 /* LAYOUT*/

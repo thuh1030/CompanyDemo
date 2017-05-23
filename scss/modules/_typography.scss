@@ -60,6 +60,19 @@ footer i{
 
 }
 
-#emailHelp{
+#emailHelp, #searchHelp{
   color:red;
+}
+
+a.searchTitle{
+  font-size:20px;
+  color:$primaryColor !important;
+}
+
+a.searchTitle:visited{
+  color:purple;
+}
+
+p.searchLink{
+  color:#008000;
 }

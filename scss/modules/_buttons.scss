@@ -1,16 +1,19 @@
-#search{
-  width:200px;
-  height:52px;
-  display:none;
-
-}
 
 #areaSearch{
   margin-top:30px;
 }
-#areaSearch a{
+#areaSearch button{
   font-size: 20px;
   @include addBackground($primaryColor);
   @include addPadding(25px, "top-bottom");
   box-shadow: 0 5px 5px 0 rgba(100,100,100,0.2);
+}
+
+#areaSearch input{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#searchButton{
+  @include addBackground($primaryColor);
 }

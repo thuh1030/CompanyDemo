@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Company</title>
+  <meta http-equiv="cleartype" content="on">
+  <meta name="MobileOptimized" content="320">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/slideout.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+</head>
+
+<body>
+  <nav id="header" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed toggle-button" data-toggle="collapse" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="#">Company</a>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <main>
+    <nav id="menu" class="slideout-menu">
+      <h2>Menu</h2>
+      <a href="search.html">Find services near you</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#howitworks">How It Works</a>
+      <a href="index.html#about">About Us</a>
+      <a href="index.html#contact">Contact Us</a>
+    </nav>
+
+    <div id="panel" class="slideout-panel">
+
+      <div id="middleContent">
+        <section id="searchBox">
+          <div class="container">
+            <p id="searchHelp"></p>
+            <div class="row">
+              <form>
+                <div class="col-xs-12">
+                  <input id="search" type="text" class="form-control" placeholder="Enter a zip code...Ex:91123">
+                </div>
+                <div class="col-xs-12">
+                  <button id="searchButton" class="btn btn-default btn-block"><span class="glyphicon glyphicon-search"></button>
+                </div>
+              </form>
+            </div>
+        </section>
+        <section>
+          <div id="resultHelp">
+
+          </div>
+          <div id="searchResult">
+          </div>
+
+        </section>
+
+        </div>
+      </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-4 col-xs-4 blockCenter">
+          <a href="#about">About</a><br />
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="col-md-4 col-xs-4 blockCenter">
+          <a href="#services">Personal Financing</a><br />
+          <a href="#services">Business Financing</a><br />
+          <a href="#services">School Financing</a><br />
+          <a href="#services">More...</a>
+        </div>
+        <div class="col-md-4 col-xs-4 blockCenter">
+          <a href="#howitworks">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="js/validateInput.js"></script>
+  <script src="js/slideout.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    var slideout = new Slideout({
+      'panel': document.getElementById('panel'),
+      'menu': document.getElementById('menu'),
+      'padding': 256,
+      'tolerance': 70,
+      'easing': 'cubic-bezier(.32,2,.55,.27)'
+    });
+  </script>
+
+  <script>
+    function zipcodeOk(zip) {
+      var re = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
+      return re.test(zip);
+    }
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      var zip = localStorage.getItem("zip");
+      if (zip != null) {
+        $("#search").val(localStorage.getItem("zip"));
+        validateInput(zipcodeOk(zip), "#searchHelp", "Please enter a valid zip code. Ex: 91123");
+        if (zipcodeOk(zip)) {
+          $.ajax({
+            url: "https://api.mlab.com/api/1/databases/companies/collections/agencies?apiKey=CZzhxMdGpWiQxQyrxwmAmnqxqmCG3EXv"
+          }).done(function(data) {
+            var output = '<div class="container">';
+            var countResult = 0;
+            $.each(data, function(key, data) {
+              if (data.address.zipcode == zip) {
+                countResult += 1;
+                output += '<div class="well">';
+                output += '<a class ="searchTitle" href=" ' + data.link + '">' + countResult + ". " + data.agency + '</a>';
+                output += '<p class ="searchLink">' + data.link + '</p>';
+                output += '<p>' + data.address.street + ', ' + data.address.city + ', ' + data.address.state + ' ' + data.address.zipcode + '</p>';
+                output += '<p>' + data.description + '</p>';
+                output += '</div>';
+              }
+            });
+            output += '</div>';
+            var numOfResult = "<div class='container'>" + countResult + " result(s) found for " + zipSearch + "</div>";
+            $("#resultHelp").html(numOfResult);
+            $("#searchResult").html(output);
+
+          });
+        }
+        localStorage.removeItem("zip");
+      }
+      // Toggle button
+      $('.toggle-button').on('click', function() {
+        slideout.toggle();
+      });
+      $('#menu a').on('click', function() {
+        slideout.toggle();
+      });
+
+
+    });
+  </script>
+
+</body>
+
+</html>

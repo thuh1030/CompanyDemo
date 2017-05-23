@@ -30,19 +30,6 @@
           </button>
         <a class="navbar-brand" href="#">Company</a>
       </div>
-      <div id="navbarMenu">
-        <ul class="nav navbar-nav">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#howitworks">How It Works</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
-        <ul  id="searchBox" class="nav navbar-nav navbar-right">
-          <li><input id="search" type="text" class="form-control" placeholder="search"></li>
-          <li><a id="searchButton" class="btn btn-default" role="button"><span class="glyphicon glyphicon-search"></a></li>
-
-        </ul>
-      </div>
       <!--/.nav-collapse -->
     </div>
   </nav>
@@ -51,10 +38,10 @@
     <nav id="menu" class="slideout-menu">
       <h2>Menu</h2>
       <a href="search.html" >Find services near you</a>
-      <a href="#services">Services</a>
-      <a href="#howitworks">How It Works</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact Us</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#howitworks">How It Works</a>
+      <a href="index.html#about">About Us</a>
+      <a href="index.html#contact">Contact Us</a>
     </nav>
 
     <div id="panel" class="slideout-panel">
@@ -90,7 +77,10 @@
         </section>
         <section id="areaSearch">
           <div class="container">
-            <a href="search.html" class="btn btn-large btn-block">Find Services Near You</a>
+            <form action="search.html" method="post">
+            <input id="search" name ="zipcode" type="text" class="form-control" placeholder="Enter a zip code...Ex:91123">
+            <button id="searchButton" class="btn btn-large btn-block">Find Services Near You</button>
+          </form>
           </div>
         </section>
         <section id="services">
@@ -346,7 +336,7 @@
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+  <script src="js/validateInput.js"></script>
   <script src="js/slideout.min.js"></script>
   <script>
     var slideout = new Slideout({
@@ -405,14 +395,6 @@
       mobile: true
     });
 
-    function validateInput(regex, helpId, helpMsg) {
-      if (regex) {
-        $(helpId).html("");
-      } else if (regex == false) {
-        $(helpId).html(helpMsg);
-      }
-    }
-
     function emailOk(email) {
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
@@ -425,6 +407,22 @@
       $('.toggle-button').on('click', function() {
         slideout.toggle();
       });
+
+      $('#menu a').on('click', function() {
+        slideout.toggle();
+      });
+
+      // Check browser support
+
+      $("#searchButton").on("click", function(){
+
+        if (typeof(Storage) !== "undefined") {
+          var zipcode = $("#search").val();
+          // Store
+         localStorage.setItem("zip", zipcode);
+      }
+    });
+
       $("#showcase").bind("mouseenter mouseleave", function() {
         $("#showcase h1").toggleClass("letterSpacing");
       });
@@ -442,19 +440,7 @@
         });
       });
 
-      $("#searchBox").on("mouseenter", function() {
 
-        $("#search").css("display", "inline");
-        $("#search").animate({
-          width: "200px"
-        }, 1000);
-      });
-      $("#searchBox").on("mouseleave", function() {
-        $("#search").animate({
-          width: "-10px"
-        }, 1000);
-        $("#search").css("display", "none");
-      });
       $(".expandContent").on("click", function(event) {
         $(this).next(".moreContent").css("display", "block");
         $(this).css("display", "none");
