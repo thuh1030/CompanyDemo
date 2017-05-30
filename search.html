@@ -51,9 +51,9 @@
           <div class="container">
             <p id="searchHelp"></p>
             <div class="row">
-              <form>
+              <form method="post">
                 <div class="col-xs-12">
-                  <input id="search" type="text" class="form-control" placeholder="Enter a zip code...Ex:91123">
+                  <input id="search" type="text" class="form-control" placeholder="Enter a zip code...Ex:90017">
                 </div>
                 <div class="col-xs-12">
                   <button id="searchButton" class="btn btn-default btn-block"><span class="glyphicon glyphicon-search"></button>
@@ -124,9 +124,10 @@
   <script>
     $(document).ready(function() {
       var zip = localStorage.getItem("zip");
-      if (zip != null) {
+      alert(zip);
+      if (zip != '') {
         $("#search").val(localStorage.getItem("zip"));
-        validateInput(zipcodeOk(zip), "#searchHelp", "Please enter a valid zip code. Ex: 91123");
+        validateInput(zipcodeOk(zip), "#searchHelp", "Please enter a valid zip code. Ex: 90017");
         if (zipcodeOk(zip)) {
           $.ajax({
             url: "https://api.mlab.com/api/1/databases/companies/collections/agencies?apiKey=CZzhxMdGpWiQxQyrxwmAmnqxqmCG3EXv"
@@ -145,7 +146,7 @@
               }
             });
             output += '</div>';
-            var numOfResult = "<div class='container'>" + countResult + " result(s) found for " + zipSearch + "</div>";
+            var numOfResult = "<div class='container'>" + countResult + " result(s) found for " + zip + "</div>";
             $("#resultHelp").html(numOfResult);
             $("#searchResult").html(output);
 

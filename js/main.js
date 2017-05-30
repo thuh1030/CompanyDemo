@@ -1,8 +1,9 @@
 $(document).ready(function() {
+
   $("#searchButton").on("click", function(e) {
     e.preventDefault();
-
     var zipSearch = $("#search").val();
+
 
     if (zipcodeOk(zipSearch)) {
       //clear searchHelp
@@ -31,7 +32,7 @@ $(document).ready(function() {
       });
 
     } else {
-      validateInput(zipcodeOk(zipSearch), "#searchHelp", "Please enter a valid zip code. Ex: 91123");
+      validateInput(zipcodeOk(zipSearch), "#searchHelp", "Please enter a valid zip code. Ex: 90017");
     }
   });
 });
